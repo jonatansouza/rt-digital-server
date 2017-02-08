@@ -10,6 +10,10 @@ function fetchList() {
     return JSON.parse(list);
 }
 
+app.get('/', function(req, res){
+	res.json('Development propose');
+});
+
 app.get('/category', function(req, res) {
     var categories = [];
     fetchList().forEach(function(el, idx) {
