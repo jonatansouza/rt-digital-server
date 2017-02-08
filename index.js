@@ -1,10 +1,9 @@
 var express = require('express');
 const fs = require('fs');
 var app = express();
-var cors = require('cors');
-var server = require('http').createServer(app);
+//var cors = require('cors');
 
-app.use(cors());
+//app.use(cors());
 
 function fetchList() {
     var list = fs.readFileSync('products.json');
@@ -52,5 +51,5 @@ app.get('/products/:type/:query', function(req, res) {
         }));
     }
 });
-server.listen(process.env.PORT || 4000);
+require('http').createServer(app).listen(process.env.PORT || 4000);
 console.log('Server Running');
