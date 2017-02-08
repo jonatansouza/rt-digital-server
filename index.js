@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 const fs = require('fs');
 var app = express();
 //var cors = require('cors');
@@ -6,7 +7,7 @@ var app = express();
 //app.use(cors());
 
 function fetchList() {
-    var list = fs.readFileSync('products.json');
+		var list = fs.readFileSync(path.join(process.cwd(), 'products.json'));
     return JSON.parse(list);
 }
 
