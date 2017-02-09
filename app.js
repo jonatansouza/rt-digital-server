@@ -1,7 +1,13 @@
 'use strict';
 
 var express = require('express')
-  , app     = express();
+  , app     = express()
+  , cors    = require('./lib/cors');
+
+/**
+* APP USE CORS
+*/
+app.use(cors());
 
 /**
  * Route dispatcher
@@ -12,4 +18,5 @@ app
 /**
  * Expose app module
  */
+
 module.exports = app;
