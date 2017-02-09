@@ -1,7 +1,6 @@
-# rt-digital
+# rt-digital-server
 
-> A NODEJS project
+web server to rt-digital
 
-## Build Setup
-
-> DEV Propose
+## License
+[MIT](LICENSE)
